@@ -1,0 +1,136 @@
+title: |-
+  Fortify on Demand Mobile Assessment
+summary: |
+  Submits a Fortify on Demand Mobile Assessment
+description: |
+  Submits a Fortify on Demand Mobile Assessment
+website: https://github.com/jeremy-chua/bitrise-step-fortify-on-demand-mobile-assessment
+source_code_url: https://github.com/jeremy-chua/bitrise-step-fortify-on-demand-mobile-assessment
+support_url: https://github.com/jeremy-chua/bitrise-step-fortify-on-demand-mobile-assessment/issues
+host_os_tags:
+  - osx-10.10
+  - ubuntu-16.04
+
+# If this step should be available only for certain project types
+# just uncomment this `project_type_tags` section and include all the
+# project types supported by the step. If the step can be used for all
+# project types then you can just remove this section.
+# If no `project_type_tags` specified (or specified as an empty array)
+# that means the step can be used for any project type.
+# You can find more information about project type tags in the Step Development Guideline:
+# https://github.com/bitrise-io/bitrise/blob/master/_docs/step-development-guideline.md
+#
+project_type_tags:
+  - ios
+#   - macos
+  - android
+#   - xamarin
+#   - react-native
+#   - cordova
+#   - ionic
+
+# Type tags are used for categorizing steps, for easier step discovery in Step Libraries.
+# You can find more information about type tags in the Step Development Guideline:
+# https://github.com/bitrise-io/bitrise/blob/master/_docs/step-development-guideline.md
+type_tags:
+  - test
+
+is_requires_admin_user: false
+is_always_run: false
+is_skippable: false
+run_if: ""
+
+deps:
+  brew:
+  - name: git
+  - name: wget
+  apt_get:
+  - name: git
+  - name: wget
+
+
+toolkit:
+  go:
+    package_name: github.com/jeremy-chua/bitrise-step-fortify-on-demand-mobile-assessment
+
+
+inputs:
+  - client_id:
+    opts:
+      title: Client ID
+      summary: Client ID for authentication
+      is_expand: true
+      is_required: true
+
+  - client_secret:
+    opts:
+      title: Client Secret
+      summary: Client secret for authentication
+      is_expand: true
+      is_required: true
+
+  - datacenter:
+    opts:
+      title: Datacenter
+      summary: Fortify on Demand Datacenters
+      is_expand: true
+      is required: true
+      value_options:
+        - "AMS"
+        - "APJ"
+        - "EMEA"
+        - "FED"
+
+
+  - entitlement_id: 
+    opts:
+      title: Entitlement ID
+      summary: Entitlement ID for this mobile assessment
+      is_expand: true
+      is_required: true
+
+  - release_id: 
+    opts:
+      title: Release ID
+      summary: Release ID for this mobile assessment
+      is_expand: true
+      is_required: true
+
+  - assessment_type:
+    opts:
+      title: Assessment Type
+      summary: Assessment type for this mobile assessment
+      is_expand: true
+      is required: true
+      value_options:
+        - "Mobile Assessment (Single Scan)"
+        - "Mobile+ Assessment (Single Scan)"
+        - "Mobile Assessment (Subscription)"
+        - "Mobile+ Assessment (Subscription)"
+
+  - framework_type:
+    opts:
+      title: Framework Type
+      summary: Framework type for this mobile assessment
+      is_expand: true
+      is required: true
+      value_options:
+        - "Android"
+        - "iOS"
+
+  - platform_type:
+    opts:
+      title: Platform Type
+      summary: Platform type for this mobile assessment
+      is_expand: true
+      is required: true
+      value_options:
+        - "Phone"
+        - "Tablet"
+        - "Both"
+
+  - file_path:
+    opts:
+      title: Path to apk/ipa
+      is_expand: true
+      is required: true
