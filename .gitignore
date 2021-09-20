@@ -2,3 +2,4 @@
 .gows.user.yml
 *.apk
 *.ipa
+*test.*

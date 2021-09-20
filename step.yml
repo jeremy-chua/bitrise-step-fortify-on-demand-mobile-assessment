@@ -40,13 +40,13 @@ is_always_run: false
 is_skippable: false
 run_if: ""
 
-deps:
-  brew:
-  - name: git
-  - name: wget
-  apt_get:
-  - name: git
-  - name: wget
+# deps:
+#   brew:
+#   - name: git
+#   - name: wget
+#   apt_get:
+#   - name: git
+#   - name: wget
 
 
 toolkit:
@@ -61,6 +61,7 @@ inputs:
       summary: Client ID for authentication
       is_expand: true
       is_required: true
+      is_sensitive: true
 
   - client_secret:
     opts:
@@ -68,6 +69,7 @@ inputs:
       summary: Client secret for authentication
       is_expand: true
       is_required: true
+      is_sensitive: true
 
   - datacenter: "AMS"
     opts:
