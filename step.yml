@@ -135,14 +135,13 @@ inputs:
         - "Android"
         - "iOS"
 
-  - platform_type: "Select Platform Type"
+  - platform_type: 
     opts:
       title: Platform Type
       summary: Platform type for this mobile assessment
       is_expand: true
       is required: true
       value_options:
-        - "Select Platform Type"
         - "Phone"
         - "Tablet"
         - "Both"
