@@ -3,7 +3,10 @@ title: |-
 summary: |
   Submits a Fortify on Demand Mobile Assessment
 description: |
-  Submits a Fortify on Demand Mobile Assessment
+  Fortify on Demand delivers comprehensive end-to-end mobile security with real-world mobile application security testing across all three tiers of the mobile ecosystem—client device, network, and web services. Similar to dynamic testing for web applications, mobile assessments utilize the compiled application binary and employ the same techniques hackers utilize to exploit vulnerabilities in mobile applications, whether they are developed internally, outsourced, or acquired. More than just simple reputation or behavioral analysis, Fortify on Demand mobile assessments provide true security testing for companies serious about securing their mobile applications.
+
+  For more information, please refer to the datasheet at https://www.microfocus.com/media/data-sheet/fortify_on_demand_ds.pdf
+
 website: https://github.com/jeremy-chua/bitrise-step-fortify-on-demand-mobile-assessment
 source_code_url: https://github.com/jeremy-chua/bitrise-step-fortify-on-demand-mobile-assessment
 support_url: https://github.com/jeremy-chua/bitrise-step-fortify-on-demand-mobile-assessment/issues
@@ -59,6 +62,7 @@ inputs:
     opts:
       title: Client ID
       summary: Client ID for authentication
+      description: Authenticating with Client Credentials. The client credentials are the API keys generated in the portal.
       is_expand: true
       is_required: true
       is_sensitive: true
@@ -67,6 +71,7 @@ inputs:
     opts:
       title: Client Secret
       summary: Client secret for authentication
+      description: Authenticating with Client Credentials. The client credentials are the API keys generated in the portal.
       is_expand: true
       is_required: true
       is_sensitive: true
@@ -75,6 +80,7 @@ inputs:
     opts:
       title: Datacenter
       summary: Fortify on Demand Datacenters
+      description: Select the datacenter assigned to you. This is provided once your are onboarded with Fortify on Demand.
       is_expand: true
       is required: true
       value_options:
@@ -88,6 +94,7 @@ inputs:
     opts:
       title: Entitlement ID
       summary: Entitlement ID for this mobile assessment
+      description: The ID assigned to ypur current entitlement. This value can be reterived in Foritfy on Demand portal.
       is_expand: true
       is_required: true
 
@@ -95,6 +102,7 @@ inputs:
     opts:
       title: Release ID
       summary: Release ID for this mobile assessment
+      description: The ID assigned to the created release. This value can be reterived in Foritfy on Demand portal.
       is_expand: true
       is_required: true
 
@@ -102,6 +110,15 @@ inputs:
     opts:
       title: Assessment Type
       summary: Assessment type for this mobile assessment
+      description: 
+
+      Mobile Assessment includes Vulnerability analysis of mobile binary, Endpoint reputation analysis and Security expert review of prioritized results.
+
+      Mobile+ Assessment includes Manual testing of binary, network and services, and DAST of backend services
+      
+      For more information, please refer to the datasheet at https://www.microfocus.com/media/data-sheet/fortify_on_demand_ds.pdf
+
+
       is_expand: true
       is required: true
       value_options:
