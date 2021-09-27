@@ -124,13 +124,14 @@ inputs:
         - "Mobile Assessment (Subscription)"
         - "Mobile+ Assessment (Subscription)"
 
-  - framework_type: 
+  - framework_type: "Select Framework Type"
     opts:
       title: Framework Type
       summary: Framework type for this mobile assessment
       is_expand: true
       is required: true
       value_options:
+        - "Select Framework Type"
         - "Android"
         - "iOS"
 
