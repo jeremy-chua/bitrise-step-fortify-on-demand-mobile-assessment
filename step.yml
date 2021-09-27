@@ -76,7 +76,7 @@ inputs:
       is_required: true
       is_sensitive: true
 
-  - datacenter:
+  - datacenter: "Select Datacenter"
     opts:
       title: Datacenter
       summary: Fortify on Demand Datacenters
@@ -84,6 +84,7 @@ inputs:
       is_expand: true
       is required: true
       value_options:
+        - "Select Datacenter"
         - "AMS"
         - "APJ"
         - "EMEA"
@@ -106,7 +107,7 @@ inputs:
       is_expand: true
       is_required: true
 
-  - assessment_type:
+  - assessment_type: "Select Assessment Type"
     opts:
       title: Assessment Type
       summary: Assessment type for this mobile assessment
@@ -117,6 +118,7 @@ inputs:
       is_expand: true
       is required: true
       value_options:
+        - "Select Assessment Type"
         - "Mobile Assessment (Single Scan)"
         - "Mobile+ Assessment (Single Scan)"
         - "Mobile Assessment (Subscription)"
