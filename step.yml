@@ -76,7 +76,7 @@ inputs:
       is_required: true
       is_sensitive: true
 
-  - datacenter: "AMS"
+  - datacenter:
     opts:
       title: Datacenter
       summary: Fortify on Demand Datacenters
@@ -106,19 +106,14 @@ inputs:
       is_expand: true
       is_required: true
 
-  - assessment_type: "Mobile Assessment (Single Scan)"
+  - assessment_type:
     opts:
       title: Assessment Type
       summary: Assessment type for this mobile assessment
-      description: 
-
-      Mobile Assessment includes Vulnerability analysis of mobile binary, Endpoint reputation analysis and Security expert review of prioritized results.
-
-      Mobile+ Assessment includes Manual testing of binary, network and services, and DAST of backend services
-      
-      For more information, please refer to the datasheet at https://www.microfocus.com/media/data-sheet/fortify_on_demand_ds.pdf
-
-
+      description: |
+        Mobile Assessment includes Vulnerability analysis of mobile binary, Endpoint reputation analysis and Security expert review of prioritized results. 
+        Mobile+ Assessment includes Manual testing of binary, network and services, and DAST of backend services
+        For more information, please refer to the datasheet at https://www.microfocus.com/media/data-sheet/fortify_on_demand_ds.pdf
       is_expand: true
       is required: true
       value_options:
@@ -127,7 +122,7 @@ inputs:
         - "Mobile Assessment (Subscription)"
         - "Mobile+ Assessment (Subscription)"
 
-  - framework_type: "Android"
+  - framework_type: 
     opts:
       title: Framework Type
       summary: Framework type for this mobile assessment
@@ -137,7 +132,7 @@ inputs:
         - "Android"
         - "iOS"
 
-  - platform_type: "Phone"
+  - platform_type:
     opts:
       title: Platform Type
       summary: Platform type for this mobile assessment
