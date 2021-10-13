@@ -2,7 +2,7 @@ package fod
 
 const (
 	DATACENTER_AMS  = "ams"
-	DATACENTER_APAC = "apj"
+	DATACENTER_APAC = "apac"
 	DATACENTER_EMEA = "emea"
 	DATACENTER_FED  = "fed"
 
