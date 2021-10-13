@@ -85,7 +85,7 @@ inputs:
       is required: true
       value_options:
         - "AMS"
-        - "APJ"
+        - "APAC"
         - "EMEA"
         - "FED"
 
