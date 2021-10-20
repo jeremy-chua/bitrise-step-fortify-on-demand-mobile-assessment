@@ -41,6 +41,41 @@ func isValidDatacenter(dc string) bool {
 	return getBaseUrl(dc) != ""
 }
 
+// Get error from http status code and additional error message
+func getErrorFromStatusCode(statusCode int, i interface{}) error {
+
+	var (
+		msg string = ""
+	)
+
+	switch statusCode {
+	case 200, 202:
+		return nil
+	case 400: // bad request
+		msg = fmt.Sprintf("[%d] bad request", statusCode)
+	case 401: // unauthorized
+		msg = fmt.Sprintf("[%d] unauthorized", statusCode)
+	case 403: // forbidden
+		msg = fmt.Sprintf("[%d] forbidden", statusCode)
+	case 404: // not found
+		msg = fmt.Sprintf("[%d] not found", statusCode)
+	case 422: // not found
+		msg = fmt.Sprintf("[%d] unprocessable entity", statusCode)
+	case 429: // too many request
+		msg = fmt.Sprintf("[%d] too many request", statusCode)
+	case 500: // internal server error
+		msg = fmt.Sprintf("[%d] internal server error", statusCode)
+	default:
+		msg = fmt.Sprintf("[%d] unknown error", statusCode)
+	}
+
+	if i != nil {
+		return fmt.Errorf("%s, %+v", msg, i)
+	}
+
+	return fmt.Errorf(msg)
+}
+
 // Check for valid scope
 // func isValidScope(s string) bool {
 // 	switch s {
@@ -51,9 +86,18 @@ func isValidDatacenter(dc string) bool {
 // 	return false
 // }
 
+// Check for valid scan type
+func isValidScanType(st string) bool {
+	switch st {
+	case SCAN_TYPE_STATIC, SCAN_TYPE_DYNAMIC, SCAN_TYPE_MOBILE:
+		return true
+	}
+	return false
+}
+
 // Check for valid assessment type id
-func isValidAssessmentTypeId(id int) bool {
-	switch id {
+func isValidAssessmentType(at string) bool {
+	switch at {
 	case MOBILE_ASSESSMENT, MOBILE_PLUS_ASSESSMENT:
 		return true
 	}

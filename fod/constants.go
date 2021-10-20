@@ -19,8 +19,12 @@ const (
 	SCOPE_MANAGE_NOTIFICATIONS = "manage-notifications" // Manage notifications
 	SCOPE_VIEW_TENANT_DATA     = "view-tenant-data"     // View data at the tenant level
 
-	MOBILE_ASSESSMENT      = 271 // Mobile Assessment
-	MOBILE_PLUS_ASSESSMENT = 272 // Mobile+ Assessment
+	SCAN_TYPE_STATIC  = "Static"  // Static scan type
+	SCAN_TYPE_DYNAMIC = "Dynamic" // Dynamic scan type
+	SCAN_TYPE_MOBILE  = "Mobile"  // Mobile scan type
+
+	MOBILE_ASSESSMENT      = "Mobile"  // Mobile Assessment
+	MOBILE_PLUS_ASSESSMENT = "Mobile+" // Mobile+ Assessment
 
 	SINGLE_SCAN  = "SingleScan"   // Single Scan
 	SUBSCRIPTION = "Subscription" // Subscription
@@ -42,6 +46,6 @@ const (
 	grant_type_password           = "password"
 
 	post_api_authenticate                = "/oauth/token"
-	post_api_V3_start_mobile_scan        = "/api/v3/releases/%s/mobile-scans/start-scan"
-	get_api_V3_releases_assessment_types = "/api/v3/releases/%s/assessment-types"
+	post_api_V3_start_mobile_scan        = "/api/v3/releases/%d/mobile-scans/start-scan"
+	get_api_V3_releases_assessment_types = "/api/v3/releases/%d/assessment-types"
 )
