@@ -76,7 +76,7 @@ inputs:
       is_required: true
       is_sensitive: true
 
-  - datacenter: " "
+  - datacenter: "AMS"
     opts:
       title: Datacenter
       summary: Fortify on Demand Datacenters
@@ -106,7 +106,7 @@ inputs:
       is_expand: true
       is_required: true
 
-  - assessment_type: " "
+  - assessment_type: "Mobile Assessment (Single Scan)"
     opts:
       title: Assessment Type
       summary: Assessment type for this mobile assessment
@@ -122,7 +122,7 @@ inputs:
         - "Mobile Assessment (Subscription)"
         - "Mobile+ Assessment (Subscription)"
 
-  - framework_type: " "
+  - framework_type: "Android"
     opts:
       title: Framework Type
       summary: Framework type for this mobile assessment
@@ -132,7 +132,7 @@ inputs:
         - "Android"
         - "iOS"
 
-  - platform_type: " "
+  - platform_type: "Phone"
     opts:
       title: Platform Type
       summary: Platform type for this mobile assessment
